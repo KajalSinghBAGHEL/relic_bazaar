@@ -28,6 +28,8 @@ Future<void> main() async {
   _remoteConfigService = await RemoteConfigService.getInstance();
   await _remoteConfigService.initialize();
 
+  print(_remoteConfigService.getDemoValue);
+
   runApp(
     Provider<AdState>.value(
       value: adState,
